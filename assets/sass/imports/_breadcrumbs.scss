@@ -1,0 +1,50 @@
+.breadcrumbs {
+	display: block;
+	padding-left: 0;
+	margin: 0;
+	&__list {
+		padding: 0 0 30px 0;
+		li {
+			display: inline-block;
+			a {
+				font-family: $heading-font;
+				font-size: 16px;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: #000000;
+				padding: 0 5px 0 0;
+				&:after {
+					content: '';
+					display: inline-block;
+					position: relative;
+					top: -3px;
+					border-bottom: 3px solid $emerald;
+					width: 15px;
+					margin-left: 5px;
+				}
+			}
+			&:last-child {
+				a {
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 991px) {
+	.breadcrumbs {
+		&__list {
+			li {
+				a {
+					font-size: 14px;
+					padding: 0 15px 0 0;
+					&:after {
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+	}
+}

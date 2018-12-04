@@ -1,0 +1,40 @@
+.content__top {
+	height: 260px;
+	margin-bottom: 30px;
+	background-size: cover;
+	background-position: center center;
+	&__inner {
+		height: 260px;
+		position: relative;
+		&__content {
+			position: absolute;
+			bottom: 30px;
+			left: 15px;
+		}
+	}
+	&__link {
+		text-align: right;
+	}
+}
+.content__title {
+	font-family: $heading-font;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 1;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+	&:hover {
+		color: #FFF;
+		text-decoration: none;
+	}
+}
+.term-description {
+	margin: 0 0 30px 0;
+}
+
+@media (min-width: 767px) {
+	.content__title {
+		font-size: 50px;
+	}
+}

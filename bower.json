@@ -1,0 +1,21 @@
+{
+  "name": "--nazwa-firmy--",
+  "description": "IMPORTANT - PLEASE READ: http://tidythemes.com/concept/",
+  "main": "index.js",
+  "authors": [
+    "Marcin Stasiak <m.stasiak@przeagencja.pl>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "iframe-resizer": "^3.5.14"
+  }
+}

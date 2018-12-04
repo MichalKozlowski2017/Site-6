@@ -1,0 +1,16 @@
+.adbox {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 30px; }
+  .adbox--small {
+    height: 375px; }
+    .adbox--small .adbox__text {
+      font-size: 20px;
+      text-align: right;
+      color: #ffffff; }
+  .adbox .btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }

@@ -1,0 +1,43 @@
+.banner-404 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 500px;
+}
+
+.page-404 {
+	padding-top: 360px;
+	display: block;
+	position: relative;
+	width: 100%;
+	&__wrapper {
+		width: 100%;
+		p {
+			background-color: #000;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #fff;
+			display: inline-block;
+			text-align: center;
+			font-family: 'futura-pt', sans-serif;
+			font-size: 18px;
+			text-transform: uppercase;
+			margin: 5px;
+			padding: 0 20px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.banner-404 {
+		height: 600px;
+	}
+	.page-404 {
+		padding-top: 450px;
+		&__wrapper {
+			p {
+				font-size: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,555 @@
+.page-template-page-zdrowaradosc {
+    #content {
+        .content__title {
+            font-family: $font-family-sans-serif;
+            text-transform: none;
+            margin-top: 60px;
+            font-weight: bold !important;
+        }
+        .content__top.content__top--big {
+            display: none;
+            margin-bottom: 0;
+            @include mq($min-width: 768px) {
+                display: block;
+            }
+            @include mq($min-width: 768px) {
+                height: 570px !important;
+
+            }
+        }
+        .content__top--big {
+            background-size: cover;
+        }
+        .content_mid {
+            background-color: #f8f8f8;
+
+            .zdrowaradosc-content {
+
+                &__wrapper {
+                    padding: 50px 25px 50px 25px;
+                    @include mq($min-width:992px) {
+                        padding: 50px 70px 50px 70px;
+                    }
+                    h2 {
+                        text-align: center;
+                        font-family: $font-family-sans-serif;
+                        text-transform: none;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 1.4;
+                    }
+
+                    p {
+                        line-height: 1.4;
+                        strong {
+                            color: $emerald;
+                            font-weight: normal;
+                        }
+                        img {
+                            margin: 50px auto;
+                            max-width: 550px;
+                            width: 100%;
+                        }
+                    }
+                    @include mq($min-width:992px) {
+                        h2 {
+                            text-align: left;
+                        }
+                        p {
+                            margin-bottom: 30px;
+                        }
+                    }
+                    &__icons {
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        &__list {
+                            display: -webkit-flex;
+                            display: -ms-flex;
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            @include mq($min-width:992px) {
+                                justify-content: space-between;
+                            }
+                            &__icon {
+                                width: 50%;
+                                height: 200px;
+                                align-items: center;
+                                flex-direction: column;
+                                align-content: space-between;
+                                box-sizing: border-box;
+                                padding: 12px;
+                                position: relative;
+                                @include mq($min-width:992px) {
+                                    width: 25%;
+                                }
+                                &__image {
+                                    height: 100px;
+                                    position: relative;
+                                    img {
+                                        max-width: 75px;
+                                        height: auto;
+                                        width: 50%;
+                                        margin: 0;
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+
+                                p {
+                                    text-align: center;
+                                    position: absolute;
+                                    bottom: 20px;
+                                    height: 40px;
+                                    padding: 10px 10px;
+                                    left: 50%;
+                                    width: 100%;
+                                    max-width: 160px;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                    }
+                    background-color: #fff;
+                    @include mq($min-width: 768px) {
+                            margin-top: -180px;
+                    }
+                    &__cta {
+                        text-align: center;
+                        margin-top: 50px;
+                        margin-bottom: 30px;
+                        @include mq($min-width:992px) {
+                            text-align: left;
+                        }
+                        p {
+                            text-align: left;
+                            font-size: 12px;
+                            margin-top: 30px;
+                        }
+                        a {
+                            font-family: $font-family-sans-serif;
+                            text-transform: none;
+                            font-weight: normal;
+                            font-size: 20px;
+                            padding: 10px 70px;
+                            margin: 0 auto;
+                        }
+                    }
+                    &__przepis {
+                        h2 {
+                            margin-bottom: 0 !important;
+                        }
+                        h3 {
+                            color: $emerald;
+                        }
+                        &__skladniki {
+                            border-radius: 20px;
+                            padding: 20px 10px;
+                            width: 100%;
+                            margin: 0 auto;
+                            h3 {
+                                color: #fff;
+                                text-align: center;
+                                margin: 0;
+                                margin-bottom: 15px;
+                                font-weight: bold;
+                            }
+                            background-color: $emerald;
+                            ul {
+                                padding: 10px;
+                                margin-left: 10px;
+                                padding-bottom: 0;
+                                padding-left: 20px;
+                                li {
+                                    color: #fff;
+                                    margin: 0;
+                                    padding: 0;
+                                    margin-bottom: 10px;
+                                    list-style: none;
+                                    position: relative;
+                                    &:before {
+                                        content: '';
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: #fff;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        left: -16px;
+                                        top: 5px;
+                                    }
+                                }
+                            }
+                            @include mq($min-width:768px) {
+                                padding: 0;
+                                margin: 0;
+                                background-color: #fff;
+                                height: 220px;
+                                width: 100%;
+                                padding: 20px 10px;
+                                h3 {
+                                    color: $emerald;
+                                    text-align: left;
+                                    font-weight: normal;
+                                    margin-bottom: 20px;
+                                }
+                                ul {
+                                    width: 100%;
+                                    position: relative;
+                                    margin: 0;
+                                    padding: 0;
+                                    padding: 0 15px;
+                                    li {
+                                        color: #000;
+                                        float: left;
+                                        width: 50%;
+                                        position: relative;
+                                        &:before {
+                                            background-color: $emerald;
+                                        }
+                                        &:nth-child(odd) {
+                                            float: left;
+                                        }
+                                        &:nth-child(even) {
+                                            float: right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &__przygotowanie {
+                            border-radius: 20px;
+                            padding: 20px 10px;
+                            width: 100%;
+                            margin: 0 auto;
+                            margin-top: 30px;
+                            background-color: $emerald;
+                            h3 {
+                                color: #fff;
+                                text-align: center;
+                                margin: 0;
+                                margin-bottom: 15px;
+                                font-weight: bold;
+                            }
+                            ol {
+                                padding: 10px;
+                                padding-bottom: 0;
+                                margin-left: 10px;
+                                padding-left: 20px;
+                                li {
+                                    color: #fff;
+                                    margin: 0;
+                                    padding: 0;
+                                    margin-bottom: 10px;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            @include mq($min-width:768px) {
+                                background-color: #fff;
+                                border-radius: 0;
+                                width: 100%;
+                                h3 {
+                                    color: $emerald;
+                                    text-align: left;
+                                    font-weight: normal;
+                                    margin-bottom: 30px;
+                                }
+                                ol {
+                                    li {
+                                        color: #000;
+                                    }
+                                }
+                                ol {
+                                  margin: 0;
+                                  padding: 0;
+                                  list-style-type: none;
+                                  margin-left: 40px;
+                                }
+
+                                ol li {
+                                  counter-increment: step-counter;
+                                  margin-bottom: 34px;
+                                  position: relative;
+                                }
+
+                                ol li::before {
+                                  content: counter(step-counter);
+                                  margin-right: 5px;
+                                  font-size: 20px;
+                                  text-align: center;
+                                  width: 30px;
+                                  height: 30px;
+                                  padding-top: 2px;
+                                  background-color: $emerald;
+                                  color: white;
+                                  font-weight: lighter;
+                                  border-radius: 50%;
+                                  position: absolute;
+                                  top: -4px;
+                                  left: -40px;
+                                }
+                            }
+                        }
+                    }
+                    .porady-diet {
+                        h3 {
+                            text-align: center;
+                            @include mq($min-width:768px) {
+                                text-align: left;
+                            }
+                        }
+                        &__wrapper {
+                            padding: 30px;
+                            border: 1px solid #979797;
+                            position: relative;
+                            @include mq($min-width:768px) {
+                                border: 0;
+                                padding: 30px 0;
+                                display: -webkit-flex;
+                                display: -ms-flex;
+                                display: flex;
+                            }
+                            &__porada {
+                                display: -webkit-flex;
+                                display: -ms-flex;
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                margin-bottom: 25px;
+                                @include mq($min-width:768px) {
+                                    width: 50%;
+                                    flex-direction: column;
+                                    &:first-child {
+                                        padding-right: 70px;
+                                        border-right: 1px solid #9B9B9B;
+                                    }
+                                    &:last-child {
+                                        padding-left: 70px;
+                                    }
+                                }
+                                &__header {
+                                    display: -webkit-flex;
+                                    display: -ms-flex;
+                                    display: flex;
+                                    align-items: center;
+                                    width: 270px;
+                                    margin: 0 auto;
+                                    margin-bottom: 20px;
+                                    @include mq($min-width:575px) {
+                                        margin-left: 0;
+                                        width: 100%;
+                                        align-items: center;
+                                        div {
+                                            width: 100%;
+                                            p {
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                    @include mq($min-width:768px) {
+                                        flex-direction: row;
+                                    }
+                                    img {
+                                        width: 70px;
+                                        height: 70px !important;
+                                        margin: 0;
+                                        margin-right: 10px;
+                                    }
+                                    div {
+                                        width: 200px;
+                                        h4 {
+                                            margin: 0;
+                                            font-size: 14px;
+                                        }
+                                        p {
+                                            text-transform: uppercase;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                                &__content {
+                                    p {
+                                        margin-bottom: 80px;
+                                        span {
+                                            text-transform: uppercase;
+                                            display: block;
+                                        }
+                                    }
+                                    &__button {
+                                        margin: 15px auto;
+                                        position: absolute;
+                                        bottom: 41px;
+                                        @include mq($min-width:575px) {
+                                            margin-left: 0;
+                                        }
+                                        a {
+                                            font-family: $font-family-sans-serif;
+                                            text-transform: none;
+                                            font-weight: normal;
+                                            font-size: 20px;
+                                            padding: 10px 30px;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.zrz-slider-przepis {
+width: 80%;
+margin: 0 auto;
+margin-top: 15px;
+margin-bottom: 20px;
+position: relative;
+@include mq($min-width: 768px) {
+    width: 100%;
+
+}
+iframe {
+    width: 100% !important;
+}
+&__slide {
+    // max-width: 1140px !important;
+    // width: 100% !important;
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+    position: relative;
+    height: auto;
+    margin: 0 10px;
+    margin-bottom: 30px;
+    img {
+        position: relative;
+        // height: auto !important;
+        width: 100% !important;
+        max-width: 600px;
+        margin: 0 auto !important;
+    }
+    &__logo {
+        width: 131px;
+        height: 80px;
+        background-size: 131px 80px;
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        display: none;
+    }
+}
+    .slick-arrow {
+        background-color: rgba(0,129,71,.7);
+        z-index: 1;
+        top: 45%;
+        transform: translateY(-50%);
+        color: #fff;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        @include mq($min-width: 575px) {
+            top: 50%;
+        }
+        &:last-child {
+            right: -15px !important;
+        }
+        &:first-child {
+            left: -15px !important;
+        }
+    }
+}
+
+#slider-ambasador {
+    max-width: 498px !important;
+    margin-top: 40px !important;
+    .ambasador-arrow {
+        background-color: rgba(0,129,71,.7);
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:last-child {
+
+        }
+        &:first-child {
+
+        }
+    }
+    .slick-dots {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        li {
+            // display: inline-block;
+            width: 0;
+            height: 0;
+            margin-right: 20px;
+            button {
+                font-size: 0;
+                background-color: #e8e8e8;
+                border: 0;
+                width: 8px;
+                height: 14px;
+                border-radius: 50%;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        .slick-active {
+            button {
+                background-color: $emerald !important;
+            }
+        }
+    }
+}
+.ambasador-arrow-right {
+    right: -15px !important;
+    top: 50% !important;
+}
+.ambasador-arrow-left {
+    left: -15px !important;
+    top: 50% !important;
+}
+
+
+.slide-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+.slide-author {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    left: 60px;
+    bottom: 15px;
+}

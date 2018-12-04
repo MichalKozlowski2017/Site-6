@@ -1,0 +1,32 @@
+.filter-dropdown {
+	&__btn {
+		margin-top: -15px;
+		display: block;
+		width: 100%;
+		height: 44px;
+		border-radius: 3px;
+		background-color: #fafafa;
+		border: solid 1px #cdcdcd;
+		padding: 10px 0 0 0;
+		font-size: 15px;
+		color: #020202;
+		text-align: center;
+		border-radius: 0;
+		&:hover, &:focus, &:visited {
+			text-decoration: none;
+		}
+	}
+	.dropdown-menu {
+		font-size: 12px;
+		a {
+			padding: 12px 15px 12px 32px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.filter-dropdown {
+		.dropdown-menu {
+			font-size: 14px;
+		}
+	}
+}

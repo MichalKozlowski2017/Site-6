@@ -1,0 +1,1100 @@
+/*
+ * Ninja Forms - Form Display Structure
+ */
+
+.ninja-forms-form-wrap *,
+.ninja-forms-form-wrap *:after,
+.ninja-forms-form-wrap *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nf-response-msg {
+    display: none;
+}
+
+.nf-field-container,
+#ninja_forms_required_items {
+    clear: both;
+    position: relative;
+    margin-bottom: 25px;
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    &.hidden-container,
+    &.hr-container {
+        margin: 0;
+        height: auto;
+        .nf-field-label {
+            display: none;
+        }
+    }
+    &.html-container {
+        .nf-field-label {
+            display: none;
+        }
+    }
+}
+
+.nf-field-label {
+    label {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+}
+.nf-field-element {
+    position: relative;
+    input,
+    select,
+    textarea {
+        margin: 0;
+        width: auto;
+        height: auto;
+        vertical-align: inherit;
+    }
+    textarea {
+        height: 200px;
+    }
+}
+.nf-field-description {
+    p:last-child {
+        margin: 0;
+    }
+}
+.nf-help {
+    background: url( '../img/help-info.png' ) no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.nf-input-limit {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.nf-static {
+    padding: 0 10px;
+}
+.nf-after-field {
+    .nf-error-msg {
+        margin-right: 10px;
+        //text-align: right;
+    }
+}
+
+/* ---------------------------------
+CHECKBOX FIELD
+----------------------------------*/
+
+
+
+/* ---------------------------------
+RADIO & CHECKBOX LISTS
+----------------------------------*/
+
+.list-radio-wrap,
+.list-checkbox-wrap {
+    .nf-field-element {
+        ul, li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            input {
+                margin-right: 5px;
+            }
+        }
+        li {
+            padding-left: 10px;
+            margin: 0 0 5px !important;
+            text-indent: initial !important;
+            label {
+                //display: inline;
+                display: block;
+                float: initial;
+                //margin: 0;
+                width: auto;
+                margin-left: 1.5em;
+            }
+            input {
+                width: auto !important;
+                float: left;
+                margin-top: .25em;
+            }
+        }
+    }
+}
+
+/* ---------------------------------
+PRODUCT FIELD
+----------------------------------*/
+.product-wrap {
+    > div {
+        input {
+            width: 80px !important;
+        }
+        .nf-product-field {
+            span {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+/* ---------------------------------
+STAR RATING
+----------------------------------*/
+.starrating-wrap .star {
+    border-bottom: 0;
+}
+
+/* ---------------------------------
+HONEYPOT
+----------------------------------*/
+
+.nf-form-hp {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* ---------------------------------
+SELECT LIST
+----------------------------------*/
+.list-select-wrap {
+    div div {
+        display: none;
+    }
+}
+
+
+/* ---------------------------------
+COLORS
+As minimal as possible
+----------------------------------*/
+.ninja-forms-req-symbol,
+.nf-error-msg, {
+    color: #E80000;
+}
+.nf-error {
+    .ninja-forms-field {
+        border: 1px solid #E80000;
+    }
+}
+.nf-field-submit-error {
+    padding: 15px;
+}
+
+.ninja-forms-noscript-message {
+    background: #f1f1f1;
+    border: 4px dashed #ccc;
+    color: #333;
+    display: block;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 40px;
+    text-align: center;
+}
+
+/* ---------------------------------
+HELPER CLASSES
+----------------------------------*/
+.two-col-list {
+    ul {
+        li {
+            float: left;
+            width: 50%
+        }
+    }
+}
+.three-col-list {
+    ul {
+        li {
+            float: left;
+            width: 33.33%
+        }
+    }
+}
+.four-col-list {
+    ul {
+        li {
+            float: left;
+            width: 25%
+        }
+    }
+}
+.five-col-list {
+    ul {
+        li {
+            float: left;
+            width: 20%
+        }
+    }
+}
+.six-col-list {
+    ul {
+        li {
+            float: left;
+            width: 16.66%
+        }
+    }
+}
+
+
+body {
+    .pika-label {
+        background: transparent;
+    }
+}
+
+/* Column Classes
+    Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+.nf-form-cont {
+    .five-sixths,
+    .four-sixths,
+    .one-fourth,
+    .one-half,
+    .one-sixth,
+    .one-third,
+    .three-fourths,
+    .three-sixths,
+    .two-fourths,
+    .two-sixths,
+    .two-thirds {
+        clear: initial;
+        float: left;
+        margin-left: 2.564102564102564%;
+        .inside {
+            padding: 20px;
+        }
+        &::after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+    }
+
+    .one-half,
+    .three-sixths,
+    .two-fourths {
+        width: 48.717948717948715%;
+    }
+
+    .one-third,
+    .two-sixths {
+        width: 31.623931623931625%;
+    }
+
+    .four-sixths,
+    .two-thirds {
+        width: 65.81196581196582%;
+    }
+
+    .one-fourth {
+        width: 23.076923076923077%;
+    }
+
+    .three-fourths {
+        width: 74.35897435897436%;
+    }
+
+    .one-sixth {
+        width: 14.52991452991453%;
+    }
+
+    .five-sixths {
+        width: 82.90598290598291%;
+    }
+
+    .first {
+        clear: both;
+        margin-left: 0;
+    }
+}
+
+
+/* ---------------------------------
+STANDARDIZE ALL FIELDS
+----------------------------------*/
+.field-wrap {
+    display: flex;
+    //flex-wrap:wrap;
+    > label {
+        display: block;
+    }
+    > div input,
+    textarea,
+    select,
+    .pikaday__container,
+    .pikaday__display {
+        width: 100%;
+    }
+    > div input[type="checkbox"] {
+        width: auto;
+    }
+    input[type="submit"],
+    input[type="button"],
+    button {
+        width: auto;
+    }
+    .nf-product-field {
+        // .nf-element {
+        //     width: 100%;
+        // }
+    }
+}
+
+.nf-field-label {
+    order: 5;
+}
+.nf-field-description {
+    width: 100%;
+    order: 10;
+}
+.nf-field-element {
+    order: 15;
+}
+
+
+/* ---------------------------------
+LABEL ABOVE
+----------------------------------*/
+.label-above {
+    .nf-field-label {
+        margin-bottom: 10px;
+    }
+}
+
+/* ---------------------------------
+LABEL BELOW
+----------------------------------*/
+.label-below {
+    .nf-field-label {
+        margin-top: 10px;
+        order: 15;
+    }
+    .nf-field-element {
+        order: 5;
+    }
+}
+
+/* ---------------------------------
+LABEL HIDDEN
+----------------------------------*/
+.label-hidden {
+    .field-wrap {
+        flex-wrap: wrap;
+    }
+    .nf-field-label {
+        height: 0;
+        margin: 0 !important;
+        width: 100%;
+        visibility: hidden;
+    }
+    .nf-field-description {
+        width: 100%;
+        order: 20;
+    }
+    .nf-field-element {
+        width: 100%;
+    }
+}
+
+/* ---------------------------------
+LABEL LEFT
+----------------------------------*/
+.label-left {
+    .field-wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nf-field-label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 2%;
+        text-align: right;
+        width: 35%;
+        order: 5;
+        label {
+            width: 100%;
+        }
+    }
+    .nf-field-description {
+        margin-left: 35%;
+    }
+    .nf-field-element {
+        display: inline-block;
+        width: 65%;
+        order: 10;
+    }
+    .nf-after-field {
+        margin-left: 36.5%;
+    }
+}
+
+/* ---------------------------------
+LABEL RIGHT
+----------------------------------*/
+.label-right {
+    .field-wrap {
+        flex-direction: row;
+    }
+    .nf-field-label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 2%;
+        width: 35%;
+        order: 10;
+    }
+    .nf-field-description {
+        margin-right: 35%;
+        order: 15;
+    }
+    .nf-field-element {
+        display: inline-block;
+        width: 65%;
+        order: 5;
+    }
+    .checkbox-wrap {
+        .nf-field-label {
+            width: auto;
+        }
+        .nf-field-element {
+            width: 20px;
+        }
+    }
+    .nf-after-field {
+        width: 65%;
+    }
+}
+/* ---------------------------------
+ADJUST SOME LABEL ABOVE & BELOW ISSUES
+----------------------------------*/
+.label-below,
+.label-above {
+    .field-wrap {
+        flex-direction: column;
+        flex-flow: wrap;
+    }
+    .nf-field-element {
+        margin: 0;
+        width: 100%;
+    }
+    .checkbox-wrap {
+        .nf-field-label {
+            //margin: 0;
+        }
+    }
+}
+
+/* ---------------------------------
+ADJUST SOME LABEL LEFT & RIGHT ISSUES
+----------------------------------*/
+.label-left,
+.label-right {
+    .textarea-wrap,
+    .listradio-wrap,
+    .listcheckbox-wrap {
+        .nf-field-label {
+            align-items: flex-start;
+        }
+    }
+    .textarea-wrap {
+        .nf-field-label {
+            margin-top: 5px;
+        }
+    }
+    .html-wrap,
+    .hr-wrap {
+        display: block;
+        .nf-field-element {
+            display: block;
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+/* ---------------------------------
+FIELD DESCRIPTION POSITIONS
+----------------------------------*/
+
+
+.page-template-page-contact,
+.page-template-page-contact-en {
+    .content__top {
+        padding: 0;
+        height: auto;
+        text-shadow: none !important;
+        @include mq($min-width: 992px) {
+        }
+    }
+    .contact-info {
+        margin-bottom: 50px;
+        h3, p {
+            padding-left: 0 !important;
+        }
+    }
+    #gmap_canvas img {
+        max-width: none !important;
+        background: none !important;
+    }
+}
+
+.required-fields-form-en {
+    span {
+        color: $emerald;
+    }
+}
+
+.benefits-title {
+    h2 {
+        font-size: 18px;
+        text-align: center;
+        font-family: $font-family-sans-serif;
+        text-transform: none;
+        color: #4A4A4A;
+    }
+}
+.form-en-benefit {
+    text-align: center;
+    margin-bottom: 30px;
+    h3 {
+        color: $emerald;
+    }
+}
+.form-en-info {
+    padding-bottom: 50px;
+    h2 {
+        font-size: 18px;
+        text-align: left;
+        font-family: $font-family-sans-serif;
+        text-transform: none;
+        color: #4A4A4A;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+.nf-error-number-max {
+    display: none;
+}
+.page-template-page-contact,
+.page-template-page-contact-en {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #ccc;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: #ccc;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: #ccc;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: #ccc;
+    }
+    form {
+      padding-bottom: 30px;
+    }
+    label {
+        font-size: 15px !important;
+    }
+
+    .list-checkbox-wrap .nf-field-element li, .list-checkbox-wrap .nf-field-element ul, .list-radio-wrap .nf-field-element li, .list-radio-wrap .nf-field-element ul {
+      margin-left: -10px !important;
+      
+    }
+    .checkboxes-container {
+      label {
+        // margin-left: 0 !important;
+        margin-bottom: 13px;
+        font-size: 15px;
+      }
+    }
+    .nf-field-element {
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="button"] {
+        // background-color: $emerald;
+        // border: none;
+        // border-radius: 50px;
+        // color: #fff;
+        // font-size: 20px;
+        // padding: 10px 20px;
+        // padding-top: 12px;
+        // text-transform: uppercase;
+        // font-family: "alternate-gothic-no-1-d", sans-serif;
+        // transition: .3s;
+        // &:hover {
+        //   background-color: #029147;
+        // }
+      }
+    }
+    .nf-form-title {
+      h3 {
+        font-weight: bold !important;
+        margin-bottom: 40px;
+      }
+    }
+    .nf-row {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+    .nf-form-fields-required {
+      display: none;
+    }
+    .nf-multi-cell .nf-cell {
+        padding: 0 7px !important;
+        width: 100%;
+        &:nth-child(4) {
+            .nf-input-limit {
+                display: none;
+            }
+            width: 25% !important;
+            float: left;
+            margin-top: 29px;
+            .nf-field-label {
+                position: absolute;
+                width: 90vw;
+                top: -29px;
+            }
+            .nf-field-element {
+                input {
+                    padding-left: 20px !important;
+                }
+                &:before {
+                    content: '+';
+                    font-size: 14px;
+                    color: #ccc;
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &:nth-child(5) {
+            width: 75% !important;
+            float: left;
+            margin-top: 29px;
+        }
+    }
+
+    .nf-field-label label {
+        padding-left: 10px !important;
+        span {
+          color: #ccc;
+        }
+    }
+
+    .p1 {
+        padding-left: 10px !important;
+        margin-bottom: 0;
+        .s2 {
+            font-weight: none !important;
+            color: #C8C8C8;
+        }
+    }
+    .nf-field-element input,
+    .nf-field-element select,
+    .nf-field-element textarea {
+        padding: 10px !important;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+
+    }
+
+    .listcountry-container {
+        .nf-field-element {
+            &:after {
+                font-family: "Glyphicons Halflings";
+                content:"\e252";
+                font-size: 10px;
+                color: #000;
+                display: inline-block;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                pointer-events: none;
+            }
+            &:before {
+                content: '';
+                height: 100%;
+                width: 1px;
+                background-color: #ccc;
+                right: 40px;
+                top: 0;
+                position: absolute;
+            }
+        }
+    }
+
+    .select-country {
+        padding: 20px 10px !important;
+        background-color: #fff;
+        height: 41px !important;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+
+    }
+
+    .nf-form-content .nf-field-container #nf-field-23-wrap .nf-field-element .ninja-forms-field {
+        padding: 10px !important;
+        border: 1px solid #ccc !important;
+        font-size: 14px !important;
+
+        &:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        option {
+            padding-top: 20px !important;
+        }
+    }
+
+
+    .checkbox-below-comment {
+        ul {
+            margin-right: 10px !important;
+            li {
+                width: 100% !important;
+                float: none !important;
+                label {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    span {
+                        color: $emerald;
+                    }
+                }
+            }
+        }
+    }
+
+    .list-checkbox-wrap, .checkbox-wrap {
+        .nf-field-element, .nf-field-label {
+            display: flex;
+            flex-direction: row;
+            li {
+                width: 100%;
+                display: inline-block;
+                float: left;
+                input {
+                    position: absolute; // take it out of document flow
+                    opacity: 0; // hide it
+                    &+label {
+                        position: relative;
+                        cursor: pointer;
+                        padding: 0;
+                    } // Box.
+                    &+label:before {
+                        content: '';
+                        margin-right: 10px;
+                        display: inline-block;
+                        vertical-align: text-top;
+                        width: 20px;
+                        height: 20px;
+                        background: white;
+                        border: 1px solid #cccccc;
+                    } // Box focus
+                    &:focus+label:before {
+                        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+                    } // Box checked
+                    &:checked+label:before {
+                        background: #fff;
+                    } // Disabled box.
+                    &:disabled+label:before {
+                        box-shadow: none;
+                        background: #ccc;
+                    } // Checkmark. Could be replaced with an image
+                    &:checked+label:after {
+                        content: '';
+                        position: absolute;
+                        left: 6px;
+                        top: 6px;
+                        background: #029147;
+                        width: 8px;
+                        height: 8px; // box-shadow:
+                        //   2px 0 0 white,
+                        //   4px 0 0 white,
+                        //   4px -2px 0 white,
+                        //   4px -4px 0 white,
+                        //   4px -6px 0 white,
+                        //   4px -8px 0 white;
+                        // transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-en-thanks {
+    text-align: center;
+    h2 {
+        font-size: 18px;
+        text-align: center;
+        font-family: $font-family-sans-serif;
+        text-transform: none;
+        color: #4A4A4A;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+    h3 {
+        color: $emerald;
+        line-height: 1.3;
+        margin-bottom: 25px;
+    }
+    button {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media (min-width: 600px) {
+    .page-template-page-contact,
+    .page-template-page-contact-en {
+        .nf-row {
+            &:first-child {
+                .nf-cell {
+                    width: 50% !important;
+                }
+            }
+            &:nth-child(2) {
+                .nf-cell {
+                    width: 50% !important;
+                    &:nth-child(4) {
+                        width: 10% !important;
+                        float: left;
+                        margin-top: 29px;
+                        .nf-field-label {
+                            position: absolute;
+                            width: 90vw;
+                            top: -29px;
+                        }
+                    }
+                    &:nth-child(5) {
+                        width: 40% !important;
+                        float: left;
+                        margin-top: 29px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .page-template-page-contact,
+    .page-template-page-contact-en {
+        .nf-row {
+            &:first-child {
+                .nf-cell {
+                    width: 50% !important;
+                    &:nth-child(2){
+                      label {
+                        font-size: 12px;
+                      }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .nf-cell {
+                    width: 50% !important;
+                    &:nth-child(4) {
+                        width: 10% !important;
+                        float: left;
+                        margin-top: 29px;
+                        .nf-field-label {
+                            position: absolute;
+                            width: 90vw;
+                            top: -29px;
+                        }
+                    }
+                    &:nth-child(5) {
+                        width: 40% !important;
+                        float: left;
+                        margin-top: 29px;
+                    }
+                }
+            }
+        }
+
+        .ninja-forms-req-symbol {
+            color: $emerald !important;
+        }
+
+        .subject-checkbox {
+            ul {
+                width: 100%;
+                li {
+                    width: auto;
+                }
+            }
+        }
+        .list-checkbox-wrap {
+            .nf-field-element {
+                display: flex;
+                flex-direction: row;
+                li {
+                    width: 50%;
+                    display: inline-block;
+                    float: left;
+                    input {
+                        position: absolute; // take it out of document flow
+                        opacity: 0; // hide it
+                        &+label {
+                            position: relative;
+                            cursor: pointer;
+                            padding: 0;
+                        } // Box.
+                        &+label:before {
+                            content: '';
+                            margin-right: 10px;
+                            display: inline-block;
+                            vertical-align: text-top;
+                            width: 20px;
+                            height: 20px;
+                            background: white;
+                            border: 1px solid #cccccc;
+                        } // Box focus
+                        &:focus+label:before {
+                            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+                        } // Box checked
+                        &:checked+label:before {
+                            background: #fff;
+                        } // Disabled box.
+                        &:disabled+label:before {
+                            box-shadow: none;
+                            background: #ccc;
+                        } // Checkmark. Could be replaced with an image
+                        &:checked+label:after {
+                            content: '';
+                            position: absolute;
+                            left: 6px;
+                            top: 6px;
+                            background: #029147;
+                            width: 8px;
+                            height: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#nf-field-41-wrap,
+#nf-field-77-wrap {
+    label {
+        font-weight: normal;
+        padding-left: 27px;
+
+        &::before {
+            margin-left: -30px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .page-template-page-contact,
+    .page-template-page-contact-en {
+      .nf-row {
+        &:first-child {
+            .nf-cell {
+                width: 50% !important;
+                &:nth-child(2){
+                  label {
+                    font-size: 12px;
+                  }
+                }
+            }
+        }
+        &:nth-child(2) {
+            .nf-cell {
+                width: 50% !important;
+                &:nth-child(4) {
+                    width: 10% !important;
+                    float: left;
+                    margin-top: 29px;
+                    .nf-field-label {
+                        position: absolute;
+                        width: 90vw;
+                        top: -29px;
+                    }
+                }
+                &:nth-child(5) {
+                    width: 40% !important;
+                    float: left;
+                    margin-top: 29px;
+                }
+            }
+        }
+      }
+
+      .list-checkbox-wrap {
+          .nf-field-element {
+              display: flex;
+              flex-direction: row;
+              li {
+                  width: 33%;
+              }
+          }
+      }
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-template-page-contact,
+    .page-template-page-contact-en {
+      .nf-row {
+        &:first-child {
+            .nf-cell {
+                width: 25% !important;
+                &:nth-child(2){
+                  label {
+                    font-size: 10px !important;
+                  }
+                }
+            }
+        }
+        &:nth-child(2) {
+            .nf-cell {
+                width: 25% !important;
+                &:nth-child(4) {
+                    width: 7% !important;
+                }
+                &:nth-child(5) {
+                    width: 18% !important;
+                }
+            }
+        }
+      }
+        .list-checkbox-wrap {
+            .nf-field-element {
+                display: flex;
+                flex-direction: row;
+                li {
+                    width: 25%;
+                }
+            }
+        }
+    }
+}

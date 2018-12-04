@@ -1,0 +1,42 @@
+$emerald: #029147;
+$green: #cad941;
+$bronze: #53270c;
+$grey: #2D2D2D;
+$heading-font: 'futura-pt', sans-serif;
+
+$body-bg: #FFF;
+$text-color: #000;
+
+$brand-primary: $emerald;
+
+$font-family-sans-serif: 'futura-pt', sans-serif;
+$font-size-base: 18px;
+
+$btn-default-color: #FFF;
+$btn-default-bg: $emerald;
+$btn-default-border: $emerald;
+
+$navbar-height: 90px;
+$navbar-default-bg: #FFF;
+
+$navbar-default-toggle-hover-bg: #fff;
+$navbar-default-toggle-icon-bar-bg: $emerald;
+$navbar-default-toggle-border-color: transparent;
+
+$navbar-default-link-color: $emerald;
+$navbar-default-link-hover-color: darken($emerald, 6.5%);
+$navbar-default-link-hover-bg: transparent;
+$navbar-default-link-active-color: darken($emerald, 6.5%);
+$navbar-default-link-active-bg: transparent;
+$navbar-default-link-disabled-color: #ccc !default;
+$navbar-default-link-disabled-bg: transparent !default;
+
+$icon-font-path: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+
+@mixin transition($t) {
+  -webkit-transition: $t;
+  -moz-transition: $t;
+  -ms-transition: $t;
+  -o-transition: $t;
+  transition: $t;
+}
